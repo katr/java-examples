@@ -11,9 +11,17 @@ public class StreamExamples {
      */
     public static void mapExample1() {
         var list = List.of(2, 10, 15, 1, 9);
-        System.out.println("-------- map --------");
+        System.out.println("-------- mapExample1 --------");
         list.stream()
                 .map(i -> i * 10)
+                .forEach(System.out::println);
+    }
+
+    public static void mapExample2() {
+        var list = List.of(2, 10, 15, 1, 9);
+        System.out.println("-------- mapExample2 --------");
+        list.stream()
+                .map(i -> String.format("The number is %d", i))
                 .forEach(System.out::println);
     }
 
@@ -69,6 +77,7 @@ public class StreamExamples {
         System.out.println("------------------ Streams example beginning ------------------");
 
         mapExample1();
+        mapExample2();
         flatMapExample1();
         flatMapExample2();
         flatMapExample3();
