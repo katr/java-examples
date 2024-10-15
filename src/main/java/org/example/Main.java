@@ -6,5 +6,6 @@ public class Main {
         System.out.println("Hello world!");
 
         StreamExamples.runExamples();
+        StringExamples.runExamples();
     }
 }
